@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "serv": "http-server -p 8000 -c-1",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "http-server": "^14.1.1",
+    "tailwindcss": "^4.1.11"
+  }
+}
