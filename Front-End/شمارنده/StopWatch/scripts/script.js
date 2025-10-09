@@ -3,17 +3,17 @@ let Pause = document.getElementById('pause')
 let Next = document.getElementById('next')
 let Again = document.getElementById('again')
 
-let MiliSeconds = document.getElementById('mili-seconds')
-let Seconds = document.getElementById('seconds')
-let Minutes = document.getElementById('minutes')
-let Watch = document.getElementById('watch')
+let MiliSecond = document.getElementById('mili-second')
+let Second = document.getElementById('second')
+let Minute = document.getElementById('minute')
+let Hour = document.getElementById('hour')
 
 let Timer = document.getElementById('time')
 
-let TimeMiliSeconds = 0
-let TimeSeconds = 0
-let TimeMinutes = 0
-let TimeWatch = 0
+let TimeMiliSecond = 0
+let TimeSecond = 0
+let TimeMinute = 0
+let TimeHour = 0
 
 Start.addEventListener(('click'), function () {
 
@@ -74,15 +74,15 @@ Start.addEventListener(('click'), function () {
         Next.style.display = 'none'
         Start.style.display = 'block'
 
-        MiliSeconds.textContent = '00'
-        Seconds.textContent = '00'
-        Minutes.textContent = '00'
-        Watch.textContent = '00'
+        MiliSecond.textContent = '00'
+        Second.textContent = '00'
+        Minute.textContent = '00'
+        Hour.textContent = '00'
 
-        TimeMiliSeconds = 0
-        TimeSeconds = 0
-        TimeMinutes = 0
-        TimeWatch = 0
+        TimeMiliSecond = 0
+        TimeSecond = 0
+        TimeMinute = 0
+        TimeHour = 0
 
         Timer.style.color = 'red'
 
@@ -97,37 +97,37 @@ Start.addEventListener(('click'), function () {
     })
 
     let counting = setInterval(() => {
-        TimeMiliSeconds += 1
+        TimeMiliSecond += 1
 
-        if (TimeMiliSeconds > 99) {
-            TimeMiliSeconds = 0
-            TimeSeconds = (TimeSeconds + 1) % 60
-            Seconds.textContent = TimeSeconds
+        if (TimeMiliSecond > 99) {
+            TimeMiliSecond = 0
+            TimeSecond = (TimeSecond + 1) % 60
+            Second.textContent = TimeSecond
 
-            if (TimeSeconds === 0) {
-                TimeMinutes = (TimeMinutes + 1) % 60
-                Minutes.textContent = TimeMinutes
+            if (TimeSecond === 0) {
+                TimeMinute = (TimeMinute + 1) % 60
+                Minute.textContent = TimeMinute
 
-                if (TimeMinutes === 0) {
-                    TimeWatch += 1
-                    Watch.textContent = TimeWatch
+                if (TimeMinute === 0) {
+                    TimeHour += 1
+                    Hour.textContent = TimeHour
                 }
             }
         }
 
-        MiliSeconds.textContent = TimeMiliSeconds
+        MiliSecond.textContent = TimeMiliSecond
 
-        if(TimeMiliSeconds <= 9) {
-            MiliSeconds.textContent = '0' + TimeMiliSeconds
+        if(TimeMiliSecond <= 9) {
+            MiliSecond.textContent = '0' + TimeMiliSecond
         }
-        if(TimeSeconds <= 9) {
-            Seconds.textContent = '0' + TimeSeconds
+        if(TimeSecond <= 9) {
+            Second.textContent = '0' + TimeSecond
         }
         if(TimeMinutes <= 9) {
-            Minutes.textContent = '0' + TimeMinutes
+            Minute.textContent = '0' + TimeMinute
         }
         if(TimeWatch <= 9) {
-            Watch.textContent = '0' + TimeWatch
+            Hour.textContent = '0' + TimeHour
         }
 
     }, 10);
@@ -149,37 +149,37 @@ Next.addEventListener(('click'), function () {
     })
 
     let counting = setInterval(() => {
-        TimeMiliSeconds += 1
+        TimeMiliSecond += 1
 
-        if (TimeMiliSeconds > 99) {
-            TimeMiliSeconds = 0
-            TimeSeconds = (TimeSeconds + 1) % 60
-            Seconds.textContent = TimeSeconds
+        if (TimeMiliSecond > 99) {
+            TimeMiliSecond = 0
+            TimeSeconds = (TimeSecond + 1) % 60
+            Second.textContent = TimeSecond
 
-            if (TimeSeconds === 0) {
-                TimeMinutes = (TimeMinutes + 1) % 60
-                Minutes.textContent = TimeMinutes
+            if (TimeSecond === 0) {
+                TimeMinute = (TimeMinute + 1) % 60
+                Minute.textContent = TimeMinute
 
-                if (TimeMinutes === 0) {
-                    TimeWatch += 1
-                    Watch.textContent = TimeWatch
+                if (TimeMinute === 0) {
+                    TimeHour += 1
+                    Hour.textContent = TimeHour
                 }
             }
         }
 
-        MiliSeconds.textContent = TimeMiliSeconds
+        MiliSecond.textContent = TimeMiliSecond
 
-        if(TimeMiliSeconds <= 9) {
-            MiliSeconds.textContent = '0' + TimeMiliSeconds
+        if(TimeMiliSecond <= 9) {
+            MiliSecond.textContent = '0' + TimeMiliSecond
         }
-        if(TimeSeconds <= 9) {
-            Seconds.textContent = '0' + TimeSeconds
+        if(TimeSecond <= 9) {
+            Second.textContent = '0' + TimeSecond
         }
-        if(TimeMinutes <= 9) {
-            Minutes.textContent = '0' + TimeMinutes
+        if(TimeMinute <= 9) {
+            Minute.textContent = '0' + TimeMinute
         }
         if(TimeWatch <= 9) {
-            Watch.textContent = '0' + TimeWatch
+            Hour.textContent = '0' + TimeHour
         }
 
     }, 10);
