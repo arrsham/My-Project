@@ -126,7 +126,7 @@ Start.addEventListener(('click'), function () {
         if(TimeMinutes <= 9) {
             Minute.textContent = '0' + TimeMinute
         }
-        if(TimeWatch <= 9) {
+        if(TimeHour <= 9) {
             Hour.textContent = '0' + TimeHour
         }
 
@@ -153,7 +153,7 @@ Next.addEventListener(('click'), function () {
 
         if (TimeMiliSecond > 99) {
             TimeMiliSecond = 0
-            TimeSeconds = (TimeSecond + 1) % 60
+            TimeSecond = (TimeSecond + 1) % 60
             Second.textContent = TimeSecond
 
             if (TimeSecond === 0) {
@@ -178,7 +178,7 @@ Next.addEventListener(('click'), function () {
         if(TimeMinute <= 9) {
             Minute.textContent = '0' + TimeMinute
         }
-        if(TimeWatch <= 9) {
+        if(TimeHour <= 9) {
             Hour.textContent = '0' + TimeHour
         }
 
